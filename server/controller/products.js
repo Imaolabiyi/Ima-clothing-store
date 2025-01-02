@@ -66,9 +66,9 @@ class Product {
       });
     }
     // Validate Images
-    else if (images.length !== 2) {
+    else if (images.length !== 1) {
       Product.deleteImages(images, "file");
-      return res.json({ error: "Must need to provide 2 images" });
+      return res.json({ error: "Must provide atleast 1 images" });
     } else {
       try {
         let allImages = [];
@@ -131,7 +131,7 @@ class Product {
     // Validate Update Images
     else if (editImages && editImages.length == 1) {
       Product.deleteImages(editImages, "file");
-      return res.json({ error: "Must need to provide 2 images" });
+      return res.json({ error: "Must need to provide 1 image" });
     } else {
       let editData = {
         pName,
@@ -142,7 +142,7 @@ class Product {
         pOffer,
         pStatus,
       };
-      if (editImages.length == 2) {
+      if (editImages.length == 1) {
         let allEditImages = [];
         for (const img of editImages) {
           allEditImages.push(img.filename);

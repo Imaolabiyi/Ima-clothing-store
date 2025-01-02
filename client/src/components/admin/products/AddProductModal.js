@@ -195,7 +195,7 @@ const AddProductDetail = ({ categories }) => {
             {/* Most Important part for uploading multiple image */}
             <div className="flex flex-col mt-4">
               <label htmlFor="image">Product Images *</label>
-              <span className="text-gray-600 text-xs">Must need 2 images</span>
+              <span className="text-gray-600 text-xs">Must need 1 images</span>
               <input
                 onChange={(e) =>
                   setFdata({
