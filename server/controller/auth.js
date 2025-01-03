@@ -77,7 +77,7 @@ class Auth {
                 .save()
                 .then((data) => {
                   return res.json({
-                    success: "Account create successfully. Please login",
+                    success: "Account created successfully. Please login",
                   });
                 })
                 .catch((err) => {
